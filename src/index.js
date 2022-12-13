@@ -2,15 +2,9 @@ require('dotenv').config();
 const { Client, Routes, Collection, GatewayIntentBits } = require('discord.js');
 const { registerCommands, registerEvents } = require('./utils/registry');
 
-const { BOT_TOKEN, APP_ID, GUILD_ID, DBKEY } = process.env;
+const { BOT_TOKEN, APP_ID } = process.env;
 const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildVoiceStates,
-    GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent,
-  ],
+  intents: [],
   rest: { version: '10' },
 });
 

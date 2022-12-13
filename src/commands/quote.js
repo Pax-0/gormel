@@ -13,7 +13,7 @@ module.exports = class QuoteCommand extends BaseSlashCommand {
     try {
       //await interaction.editReply({ content: 'Flipping...' });
       let { data } = await axios.get(url);
-      console.log(data);
+
       const res = data ? data : 'Couldnt find a good quote to give.. :(';
       return interaction.editReply({
         content: `${res.text}\n\n - ${res.author.name}`,
