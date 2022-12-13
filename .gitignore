@@ -1,0 +1,8 @@
+# enviroment variables and secrets
+.env
+# lib files
+node_modules
+package-lock.json
+
+# config files
+config.json
