@@ -14,7 +14,6 @@ module.exports = class NumberCommand extends BaseSlashCommand {
     try {
       //await interaction.editReply({ content: 'Flipping...' });
       let { data } = await axios.get(url);
-      console.log(data);
       const res =
         data && data.found
           ? data.text
